@@ -75,8 +75,8 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ userProfile, testSessio
 
   // Example customer care info
   const customerCare = {
-    email: 'parikshya.blackbytes@gmail.com',
-    phone: '+977-9820987206',
+    email: 'skssanjaysah3@gmail.com',
+    phone: '+977-9825711862',
     
   };
 

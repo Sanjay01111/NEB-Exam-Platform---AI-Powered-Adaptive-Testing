@@ -1,10 +1,9 @@
-const CACHE_NAME = 'parikshya-v1';
+const CACHE_NAME = 'sanjay-v1';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/favicon.svg'
+  '/sanjay.svg', // Added existing asset
+  '/sw.js' // Ensure the service worker itself is cached
 ];
 
 // Install event - cache resources

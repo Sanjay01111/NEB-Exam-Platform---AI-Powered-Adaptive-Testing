@@ -100,7 +100,7 @@ const LoginForm: React.FC = React.memo(() => {
               {isLogin ? 'Welcome Back' : 'Create Account'}
             </h1>
             <p className="text-sm sm:text-base text-gray-400 px-2">
-              {isLogin ? 'Sign in to continue your learning journey' : 'Join the Parikshya exam preparation platform'}
+              {isLogin ? 'Sign in to continue your learning journey' : 'Join the Sanjay exam preparation platform'}
             </p>
           </div>
 

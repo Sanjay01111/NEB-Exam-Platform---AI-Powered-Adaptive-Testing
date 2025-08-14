@@ -19,6 +19,44 @@ export const useAuthStore = create<AuthState>((set, get) => ({
 
   signIn: async (email: string, password: string) => {
     set({ loading: true });
+    
+    // Admin login with hardcoded credentials
+    if (email === 'skssanjaysah3@gmail.com' && password === 'nepal@123') {
+      const adminUser = {
+        id: 'admin-001',
+        email: 'skssanjaysah3@gmail.com',
+        aud: 'authenticated',
+        role: 'authenticated',
+        app_metadata: {},
+        user_metadata: {},
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString()
+      };
+      
+      const adminProfile = {
+        id: 'admin-001',
+        user_id: 'admin-001',
+        email: 'skssanjaysah3@gmail.com',
+        full_name: 'Admin',
+        role: 'admin' as const,
+        exam_type: 'IOE' as const,
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString()
+      };
+      
+      set({ 
+        user: adminUser, 
+        profile: adminProfile, 
+        loading: false 
+      });
+      
+      return { 
+        data: { user: adminUser, session: null }, 
+        error: null 
+      };
+    }
+    
+    // Regular user login via Supabase
     const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,

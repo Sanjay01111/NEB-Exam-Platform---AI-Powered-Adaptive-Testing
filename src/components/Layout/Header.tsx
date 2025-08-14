@@ -14,18 +14,7 @@ const Header: React.FC = () => {
     window.location.href = '/';
   };
 
-  const [showDropdown, setShowDropdown] = React.useState(false);
-  const dropdownRef = React.useRef<HTMLDivElement>(null);
-
-  React.useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setShowDropdown(false);
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  // Dropdown state and ref removed as they are unused
 
   const navigationItems = [
     { path: '/dashboard', label: 'Dashboard', icon: Home },
@@ -59,7 +48,7 @@ const Header: React.FC = () => {
             </div>
             <div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-primary-400 via-white to-accent-green-400 bg-clip-text text-transparent">
-                Parikshya
+                Sanjay
               </h1>
               <p className="text-sm text-gray-300">AI-Powered Adaptive Testing Platform</p>
             </div>

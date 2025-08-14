@@ -13,7 +13,6 @@ import {
   Trophy, 
   Brain, 
   TrendingUp, 
-  Award,
   Zap,
   Star,
   Activity,
@@ -228,7 +227,7 @@ const Dashboard: React.FC = React.memo(() => {
                 <span className="text-accent-green-400 font-medium"> Let's achieve your goals together.</span>
               </p>
               <div className="mt-3">
-                <span className="text-primary-400 text-sm font-medium">Powered by Parikshya</span>
+                <span className="text-primary-400 text-sm font-medium">Powered by Sanjay</span>
               </div>
             </div>
           </div>
